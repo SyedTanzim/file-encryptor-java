@@ -33,7 +33,7 @@ public class MainWindow extends JFrame {
         setTitle("File Encryptor");
 
         // Set the size of the window (width: 500 pixels, height: 300 pixels)
-        setSize(450, 210);
+        setSize(450, 230);
 
         // Ensure the application stops running when the window is closed
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -53,6 +53,7 @@ public class MainWindow extends JFrame {
         // --- Row 1: File selection area ---
         JPanel filePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         JLabel fileLabel = new JLabel("Select File:");
+        filePanel.setBorder(BorderFactory.createEmptyBorder(10, 0, 0, 0));
 
         // Create a text field to show the selected file path (read-only)
         filePathField = new JTextField(30);
@@ -123,7 +124,7 @@ public class MainWindow extends JFrame {
         actionPanel.add(decryptButton);
 
         // --- Row 4: Status display area ---
-        JPanel statusPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JPanel statusPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
         // Create a label to show the user what is happening
         statusLabel = new JLabel("Status: Ready");
