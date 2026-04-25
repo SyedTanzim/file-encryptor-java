@@ -1,0 +1,16 @@
+# Compiled files
+out/
+*.class
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+.antigravity/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Encrypted test files
+*.enc
