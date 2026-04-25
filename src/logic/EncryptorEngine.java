@@ -32,6 +32,12 @@ public class EncryptorEngine {
             throw new IOException("File not found: " + filePath);
         }
 
+        // Check if the file is already encrypted
+        if (filePath.endsWith(".enc")) {
+            throw new IllegalArgumentException(
+                    "File is already encrypted!");
+        }
+
         // Define the output file path by appending ".enc" to the original name
         String outputFilePath = filePath + ".enc";
         File outputFile = new File(outputFilePath);
